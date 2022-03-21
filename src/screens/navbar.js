@@ -1,8 +1,6 @@
 import { yScrollContext } from "../components/yScroll";
-import { CustomLink } from "../components/customLink";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useContext } from "react";
-
 
 export const Navbar = () => {
     const {yScroll, setYscroll} = useContext(yScrollContext)
@@ -10,10 +8,10 @@ export const Navbar = () => {
 
     return(
         <div className="navbar-main">
-            <div className="navbar-item"><CustomLink to= {"/"} state= {{backward: {key: location.key, yscroll: yScroll}}}>page1</CustomLink></div>
-            <div className="navbar-item"><CustomLink to= {"page2"} state= {{backward: {key: location.key, yscroll: yScroll}}}>page2</CustomLink></div>
-            <div className="navbar-item"><CustomLink to= {"page3"} state= {{backward: {key: location.key, yscroll: yScroll}}}>page3</CustomLink></div>
-            <div className="navbar-item"><CustomLink to= {"page4"} state= {{backward: {key: location.key, yscroll: yScroll}}}>page4</CustomLink></div>
+            <div className="navbar-item"><Link to= {"/"} state= {{backward: {key: location.key, yscroll: yScroll}}}>page1</Link></div>
+            <div className="navbar-item"><Link to= {"page2"} state= {{backward: {key: location.key, yscroll: yScroll}}}>page2</Link></div>
+            <div className="navbar-item"><Link to= {"page3"} state= {{backward: {key: location.key, yscroll: yScroll}}}>page3</Link></div>
+            <div className="navbar-item"><Link to= {"page4"} state= {{backward: {key: location.key, yscroll: yScroll}}}>page4</Link></div>
         </div>
     )
 }
